@@ -1,0 +1,61 @@
+<div class="home-wrapper">
+    <!-- Animated Background Elements -->
+    <div class="overlay-grid"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Hero Header -->
+    <div class="content-z text-center mt-5">
+        <h1 class="professional-title animate-stagger stagger-1">Venkatesh K</h1>
+        <h2 class="professional-subtitle animate-stagger stagger-2">Frontend Developer</h2>
+
+        <!-- Tagline -->
+        <p class="hero-tagline animate-stagger stagger-3 opacity-75">
+            Crafting intuitive, scalable, and dynamic web experiences.
+        </p>
+
+        <!-- Status & Actions -->
+        <div class="d-flex flex-column align-items-center gap-4 mt-4 animate-stagger stagger-4">
+            <div class="d-flex gap-3 mt-2">
+                <button class="btn custom-btn rounded-pill px-4 py-2" routerLink="/portfolio">Explore My Work</button>
+                <button class="btn custom-btn-outline rounded-pill px-4 py-2" routerLink="/contact">Let's
+                    Connect</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Interactive Grid -->
+    <div class="content-z circles-container animate-stagger stagger-5">
+        <div class="dotted-circle float-anim float-delay-1" routerLink="/resume" title="My Experience"
+            [class.active]="currentSlideIndex === 0" (mouseenter)="setSlide(0)">
+            <i class="bi bi-briefcase"></i>
+            <span class="circle-data">4+ Yrs<br>Exp</span>
+        </div>
+        <div class="dotted-circle float-anim float-delay-2" routerLink="/skills" title="Core Skill"
+            [class.active]="currentSlideIndex === 1" (mouseenter)="setSlide(1)">
+            <i class="bi bi-code-slash"></i>
+            <span class="circle-data">Angular 9+</span>
+        </div>
+        <div class="dotted-circle float-anim float-delay-3" routerLink="/about" title="My Role"
+            [class.active]="currentSlideIndex === 2" (mouseenter)="setSlide(2)">
+            <i class="bi bi-laptop"></i>
+            <span class="circle-data">Frontend<br>Dev</span>
+        </div>
+        <div class="dotted-circle float-anim float-delay-4" routerLink="/skills" title="Community"
+            [class.active]="currentSlideIndex === 3" (mouseenter)="setSlide(3)">
+            <i class="bi bi-heart"></i>
+            <span class="circle-data">TQI<br>Volunteer</span>
+        </div>
+    </div>
+
+    <!-- Carousel Footer -->
+    <div class="content-z bottom-banner mb-3 animate-stagger stagger-6">
+        <div class="banner-text fade-in-text">{{ slides[currentSlideIndex] }}</div>
+        <div class="carousel-indicators-custom mt-3">
+            @for (slide of slides; track $index) {
+            <span [class.active]="currentSlideIndex === $index" (click)="setSlide($index)"></span>
+            }
+        </div>
+    </div>
+</div>

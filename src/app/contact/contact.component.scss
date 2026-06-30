@@ -1,0 +1,59 @@
+/* Minimalist Typography Contact Styles */
+
+.contact-link {
+    color: white;
+    transition: all 0.3s ease;
+    
+    .contact-text {
+        color: rgba(255, 255, 255, 0.9);
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 2px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 50%; /* Center the underline animation */
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    }
+
+    &:hover {
+        .contact-text {
+            color: #ffffff;
+            
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.tracking-wide {
+    letter-spacing: 0.15em;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+
+    &:hover {
+        color: #38bdf8;
+        background: rgba(255, 255, 255, 0.03);
+        transform: translateY(-3px);
+    }
+}
