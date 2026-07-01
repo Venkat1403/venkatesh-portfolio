@@ -51,14 +51,23 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 1.5rem;
-  height: 275px;
-  /* Fixed static height directly on the card */
+  min-height: 275px;
+  /* Min height to maintain uniformity but allow expansion */
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
   &:hover {
     transform: translateX(10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
     border-color: rgba(56, 189, 248, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    height: auto;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 }
 

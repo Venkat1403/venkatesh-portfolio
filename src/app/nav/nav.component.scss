@@ -1,7 +1,4 @@
 .custom-navbar {
-    position: sticky;
-    top: 1rem;
-    z-index: 1000;
     margin: 0 auto;
     width: 95%;
     max-width: 1200px;
@@ -21,6 +18,15 @@
 
     .navbar-brand {
         font-size: 35px;
+    }
+
+    @media (max-width: 768px) {
+        border-radius: 20px;
+        padding: 0.8rem 1rem;
+        
+        .navbar-brand {
+            font-size: 24px;
+        }
     }
 }
 

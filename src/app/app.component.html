@@ -1,9 +1,7 @@
-<div class="app-layout">
-  <div class="top-bar glass-panel m-3">
-    <app-header></app-header>
-    <app-nav></app-nav>
-  </div>
-  <main class="container my-5 fade-in" style="flex: 1;">
+<div class="app-layout d-flex flex-column min-vh-100">
+  <app-header></app-header>
+  <app-nav></app-nav>
+  <main class="container mb-4 mb-md-5 fade-in flex-grow-1">
     <router-outlet></router-outlet>
   </main>
   <app-footer></app-footer>
