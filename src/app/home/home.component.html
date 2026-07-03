@@ -17,32 +17,35 @@
 
         <!-- Status & Actions -->
         <div class="d-flex flex-column align-items-center gap-4 mt-4 animate-stagger stagger-4 w-100">
-            <div class="d-flex flex-column flex-sm-row gap-3 mt-2 w-100 px-4 justify-content-center" style="max-width: 400px;">
-                <button class="btn custom-btn rounded-pill px-4 py-2 w-100" routerLink="/portfolio">Explore My Work</button>
-                <button class="btn custom-btn-outline rounded-pill px-4 py-2 w-100" routerLink="/contact">Let's Connect</button>
+            <div class="d-flex flex-column flex-sm-row gap-3 mt-2 w-100 px-4 justify-content-center"
+                style="max-width: 400px;">
+                <button class="btn custom-btn rounded-pill px-4 py-2 w-100" routerLink="/portfolio">Explore My
+                    Work</button>
+                <button class="btn custom-btn-outline rounded-pill px-4 py-2 w-100" routerLink="/contact">Let's
+                    Connect</button>
             </div>
         </div>
     </div>
 
     <!-- Floating Interactive Grid -->
     <div class="content-z circles-container animate-stagger stagger-5">
-        <div class="dotted-circle float-anim float-delay-1" routerLink="/resume" title="My Experience"
+        <div class="dotted-circle float-anim float-delay-1" title="My Experience"
             [class.active]="currentSlideIndex === 0" (mouseenter)="setSlide(0)">
             <i class="bi bi-briefcase"></i>
             <span class="circle-data">4+ Yrs<br>Exp</span>
         </div>
-        <div class="dotted-circle float-anim float-delay-2" routerLink="/skills" title="Core Skill"
-            [class.active]="currentSlideIndex === 1" (mouseenter)="setSlide(1)">
+        <div class="dotted-circle float-anim float-delay-2" title="Core Skill" [class.active]="currentSlideIndex === 1"
+            (mouseenter)="setSlide(1)">
             <i class="bi bi-code-slash"></i>
             <span class="circle-data">Angular 9+</span>
         </div>
-        <div class="dotted-circle float-anim float-delay-3" routerLink="/about" title="My Role"
-            [class.active]="currentSlideIndex === 2" (mouseenter)="setSlide(2)">
+        <div class="dotted-circle float-anim float-delay-3" title="My Role" [class.active]="currentSlideIndex === 2"
+            (mouseenter)="setSlide(2)">
             <i class="bi bi-laptop"></i>
             <span class="circle-data">Frontend<br>Dev</span>
         </div>
-        <div class="dotted-circle float-anim float-delay-4" routerLink="/skills" title="Community"
-            [class.active]="currentSlideIndex === 3" (mouseenter)="setSlide(3)">
+        <div class="dotted-circle float-anim float-delay-4" title="Community" [class.active]="currentSlideIndex === 3"
+            (mouseenter)="setSlide(3)">
             <i class="bi bi-heart"></i>
             <span class="circle-data">TQI<br>Volunteer</span>
         </div>

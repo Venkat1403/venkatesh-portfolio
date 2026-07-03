@@ -69,3 +69,32 @@
         padding: 0.5rem;
     }
 }
+
+/* Light Theme Overrides for Contact */
+:host-context([data-bs-theme="light"]) {
+    .contact-link {
+        color: var(--text-color);
+        
+        .contact-text {
+            color: var(--text-color);
+        }
+        
+        &:hover .contact-text {
+            color: var(--primary-color);
+        }
+    }
+    
+    .social-link {
+        color: rgba(0, 0, 0, 0.6);
+        
+        &:hover {
+            color: var(--primary-color);
+            background: rgba(0, 0, 0, 0.05);
+        }
+    }
+    
+    /* Override bootstrap border-light in this component */
+    ::ng-deep .border-light {
+        border-color: rgba(0,0,0,0.1) !important;
+    }
+}

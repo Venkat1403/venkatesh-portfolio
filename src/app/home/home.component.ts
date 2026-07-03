@@ -13,11 +13,11 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent implements OnInit, OnDestroy {
   slides: string[] = [
     "4+ Years of Professional Web Development Experience",
-    "Expertise in Angular 9+ and Modern Frontend Architecture",
+    "Expertise in Angular 9+ version and Modern Frontend Architecture",
     "Dedicated Frontend Developer Passionate About UI/UX",
     "Active TQI Volunteer Mentoring Youth & Community"
   ];
-  
+
   currentSlideIndex: number = 0;
   private intervalId: any;
 

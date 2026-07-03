@@ -1,15 +1,9 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ResumeComponent } from './resume/resume.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ContactComponent } from './contact/contact.component';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { MyResumeComponent } from './my-resume/my-resume.component';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'resume', component: ResumeComponent },
-    { path: 'skills', component: SkillsComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: '**', component: HomeComponent }
+    { path: '', component: MainLayoutComponent },
+    { path: 'my-resume', component: MyResumeComponent },
+    { path: '**', redirectTo: '' }
 ];

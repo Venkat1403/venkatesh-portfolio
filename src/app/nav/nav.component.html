@@ -1,12 +1,13 @@
-<nav class="navbar navbar-expand-md navbar-dark custom-navbar mt-3 mb-4">
+<nav class="navbar navbar-expand-md navbar-dark custom-navbar mt-3 mb-4" [class.resume-nav]="activeSection === 'my-resume'">
     <div class="container-fluid d-flex justify-content-between align-items-center w-100">
         <!-- Logo -->
-        <a class="navbar-brand text-gradient fw-bold ms-2" routerLink="/home" style="text-decoration: none;">
+        <a class="navbar-brand text-gradient fw-bold ms-2" style="cursor: pointer; text-decoration: none;"
+            (click)="scrollTo('home')">
             Venkatesh K</a>
 
         <!-- Toggler for Mobile View -->
-        <button class="navbar-toggler" type="button" (click)="toggleMenu()"
-            aria-controls="navbarNav" [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" (click)="toggleMenu()" aria-controls="navbarNav"
+            [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -14,26 +15,28 @@
         <div class="collapse navbar-collapse justify-content-end" [class.show]="isMenuOpen" id="navbarNav">
             <ul class="navbar-nav gap-1 gap-md-2 mt-3 mt-md-0 text-center align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link custom-link" routerLink="/home" routerLinkActive="active-link"
-                        (click)="closeMenu()">Home</a>
+                    <a class="nav-link custom-link" style="cursor: pointer;" [class.active-link]="activeSection === 'home'" (click)="scrollTo('home')">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link custom-link" routerLink="/about" routerLinkActive="active-link"
-                        (click)="closeMenu()">About</a>
+                    <a class="nav-link custom-link" style="cursor: pointer;" [class.active-link]="activeSection === 'about'" (click)="scrollTo('about')">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link custom-link" routerLink="/resume" routerLinkActive="active-link"
-                        (click)="closeMenu()">Experience &
-                        Education</a>
+                    <a class="nav-link custom-link" style="cursor: pointer;" [class.active-link]="activeSection === 'skills'" (click)="scrollTo('skills')">Skills & Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link custom-link" routerLink="/skills" routerLinkActive="active-link"
-                        (click)="closeMenu()">Skills &
-                        Projects</a>
+                    <a class="nav-link custom-link" style="cursor: pointer;" [class.active-link]="activeSection === 'resume'" (click)="scrollTo('resume')">Experience & Education</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link custom-link" routerLink="/contact" routerLinkActive="active-link"
-                        (click)="closeMenu()">Contact</a>
+                    <a class="nav-link custom-link" style="cursor: pointer;" [class.active-link]="activeSection === 'my-resume'" (click)="scrollTo('my-resume')">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-link" style="cursor: pointer;" [class.active-link]="activeSection === 'contact'" (click)="scrollTo('contact')">Contact</a>
+                </li>
+                <li class="nav-item d-flex align-items-center ms-md-2">
+                    <button class="btn btn-link text-decoration-none p-1"
+                        style="font-size: 1.2rem; color: var(--text-color);" (click)="toggleTheme()" title="Toggle Theme">
+                        <i class="bi" [class.bi-moon-stars-fill]="!isLightMode" [class.bi-sun-fill]="isLightMode"></i>
+                    </button>
                 </li>
             </ul>
         </div>

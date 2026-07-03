@@ -68,3 +68,43 @@
         transform: translateY(-2px);
     }
 }
+
+/* Light Theme Overrides for Footer */
+:host-context([data-bs-theme="light"]) {
+    .footer-full-width {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .border-top-only {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .footer-social-link {
+        background: rgba(0, 0, 0, 0.05);
+        color: rgba(0, 0, 0, 0.6);
+        
+        &:hover {
+            background: rgba(99, 102, 241, 0.15); /* primary color tint */
+            color: var(--primary-color);
+        }
+    }
+    
+    .footer-text-link {
+        color: rgba(0, 0, 0, 0.7);
+        
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+    
+    .btn-top {
+        border-color: rgba(0, 0, 0, 0.2);
+        color: rgba(0, 0, 0, 0.6);
+        
+        &:hover {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+    }
+}
